@@ -1,0 +1,55 @@
+.containerStyle{
+    // width: 100%;
+    // height: 100%;
+// background-color: red;
+}
+.toolWrapper{
+    display: flex;
+    background-color: var(--second);
+    padding: 0.5rem;
+    i{
+        margin-left: 1.5rem;
+        cursor: pointer;
+        transition: all 0.1s;
+        color: var(--third);
+    }
+    i:hover{
+        transform: scale(1.2);
+        
+    }
+    i:active{
+        transform: scale(0.98);
+    }
+}
+
+.textAreaWrapper{
+
+    // flex:1;
+    // background-color: blue;
+    // display:inline-block;
+    height: 90%;
+    width: 100%;
+    // background-color: green
+    position: relative;;
+
+    textarea{
+        width:100%;
+        height: 100%;
+        outline: none;
+        border: 1px solid transparent;
+        font-size: large;
+        resize: none;
+   
+    }
+    .mdl{
+        position: absolute;
+        // display: inline-block;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    
+}

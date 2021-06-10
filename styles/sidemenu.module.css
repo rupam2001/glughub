@@ -1,0 +1,64 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* transition: all 0.4s; */
+    position: sticky;
+    top: 100px;
+}
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-right: 0.4px solid #C4C4C4;
+    padding-right: 1rem;
+    min-height: 10rem;
+}
+.route{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.route:active{
+    transform: scale(0.98);
+}
+
+.active{
+    background-color: var(--second);
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    color: #4996DC;
+    width: 10rem;
+    /* justify-content: flex-start; */
+    
+}
+@keyframes expand{
+    0%{
+        /* justify-content: flex-end; */
+        /* width: fit-content; */
+    }
+    50%{
+        /* width: 7rem; */
+        /* justify-content: flex-start;  */
+    }
+    100%{
+        /* justify-content: flex-start;  */
+        /* width: 10rem; */
+    }
+}
+.compose{
+    color: #216418;
+    position: absolute;
+    margin-top: 40vh;
+    transition: all 0.6s;
+    background-color: whitesmoke;
+    padding: 0.5rem;
+}
+.compose:hover{
+    /* transform: scale3d(0.5, 1, 1.7); */
+}
