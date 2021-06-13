@@ -1,7 +1,9 @@
-import Layout from '../components/layout'
-import { Button } from '../components/stateless/stateless'
-import styles from '../styles/Home.module.scss'
-import router from 'next/router'
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
+
 import Article from '../components/article'
 import { getArticleAsync } from '../utils/globalapicalls'
 

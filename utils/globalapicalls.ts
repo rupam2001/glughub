@@ -1,3 +1,9 @@
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
+
 import Cookie from 'js-cookie'
 import { ENDPOINT, QuestionCreateRoute } from './constanse'
 
@@ -45,7 +51,6 @@ async function createArticleAsync(article: articlePropType): Promise<{ success: 
     const token = Cookie.get('token')
 
     if (!token) return { success: false, newArticle: {} }
-    // alert(token)
 
     const time = new Date
 
@@ -56,9 +61,10 @@ async function createArticleAsync(article: articlePropType): Promise<{ success: 
 
 
 async function getQuestionsAsync(skip: Number, limit: Number): Promise<Array<any>> {
-    const { questions } = await fetch(ENDPOINT + "/question/getall/" + skip + "/" + limit, { method: 'GET', headers: { "Content-Type": "application/json" } }).then(resp => resp.json())
+    const { questions } = await fetch(ENDPOINT + "/question/getall/" + skip + "/" + limit, { method: 'GET', headers: { "Content-Type": "application/json" } }).then(resp => resp.json())   
     return questions
 }
+
 async function getArticleAsync(skip: Number, limit: Number): Promise<Array<any>> {
     const { articles } = await fetch(ENDPOINT + "/question/article/getall/" + skip + "/" + limit, { method: 'GET', headers: { "Content-Type": "application/json" } }).then(resp => resp.json())
     return articles
@@ -135,7 +141,6 @@ async function getReaction(id: string) {
     const token = Cookie.get('token')
     if (!token) {
         //for user who is not authenticated
-        // throw new Error("token not found")
         const { nums } = await fetch(ENDPOINT + "/reaction/article/get/" + id, { method: "GET", headers: { "Content-Type": "application/json" } }).then(resp => resp.json())
         return { nums, myreaction: null }
     }

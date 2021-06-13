@@ -1,4 +1,8 @@
-
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
 .container{
     /* max-height: 100vh; */
    /* overflow: hidden; */
@@ -82,7 +86,7 @@
     flex:1;
   }
   .middle{
-    flex:4;
+    flex:6;
     /* background-color: aqua; */
     overflow: hidden;
 

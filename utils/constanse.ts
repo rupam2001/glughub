@@ -1,5 +1,11 @@
-const ENDPOINT = 'https://pacific-harbor-79698.herokuapp.com'
-// const ENDPOINT = 'http://192.168.43.79:3300'
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
+
+const ENDPOINT = 'https://glughub-backend.herokuapp.com/'
+// const ENDPOINT = 'http://192.168.29.19:3300'
 
 const AuthRoute = '/auth/google' //post
 const AutoAuthRoute = '/auth/autoauth' //post
@@ -27,7 +33,7 @@ const questionWindowSize = 20;  //amount of question fetching at a time and subs
 const notificationWindowSize = 10
 
 const profilePicPlaceHolder = 'https://pbs.twimg.com/profile_images/1176237957851881472/CHOXLj9b_400x400.jpg'
-const coverPhotoPlacHolder = 'https://onlymevip.com/postuploads/profilepictures/default_cover.jpg'
+const coverPhotoPlacHolder = 'https://i.pinimg.com/originals/83/f2/8e/83f28e151f4a0b99a216abb8e0d72284.jpg'
 
 export {
     ENDPOINT, AuthRoute, AutoAuthRoute, LogoutRoute,

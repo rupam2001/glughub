@@ -1,6 +1,5 @@
 import style from '../styles/Layout.module.css'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
 import LoadingBar from 'react-top-loading-bar'
 import { progressBarRef } from './refs'
 import Profile from './profile'
@@ -13,7 +12,7 @@ export default function NavBar() {
         <div className={style.navbar}>
             <LoadingBar color='#f11946' ref={progressBarRef} />
             <Link href="/">
-                <span className={style.title}>Q-Overflow</span>
+                <span className={style.title}>GlugHub</span>
             </Link>
             <Searchbar />
             <Notification />

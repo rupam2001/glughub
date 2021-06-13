@@ -1,4 +1,9 @@
 
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
 export function ToggleTheme() {
     const theme = localStorage.getItem("theme")
     let r = document.querySelector(":root")

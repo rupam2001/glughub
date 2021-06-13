@@ -140,17 +140,17 @@ export default function Profile() {
                         </>
                     ) : (
                             <div id="myDropdown">
-                                <div className="dd-item" id="myDropdown" onClick={handleThemeClick}>
+                                {/* <div className="dd-item" id="myDropdown" onClick={handleThemeClick}>
                                     <i className={"fa fa-paint-brush"} aria-hidden="true"></i>
                                     <span id="ignore">Theme</span>
-                                </div>
+                                </div> */}
                                 <GoogleLogin
-                                    clientId="432827620544-earre7sba34jptupkvjuinarabmts09e.apps.googleusercontent.com"
+                                    clientId="481919306181-r6gg01qe9b3qth8c394937rb10197vbv.apps.googleusercontent.com"
                                     buttonText="Login"
                                     onSuccess={responseSuccessGoogle}
                                     onFailure={responseErrorGoogle}
                                     cookiePolicy={'single_host_origin'}
-                                    redirectUri="https://q-overflow.vercel.app/"
+                                    redirectUri="https://glughub.vercel.app/"
                                     // redirectUri="http://localhost:3000/"
 
                                     render={renderProps => (

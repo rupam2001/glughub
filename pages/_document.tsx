@@ -5,7 +5,7 @@ export default class CustomDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <title>Q-Overflow</title>
+                    <title>GlugHub</title>
                 </Head>
                 <body>
                     <Main />

@@ -1,4 +1,8 @@
-import Head from 'next/head'
+/**
+ * Glughub
+ * from Q-overflow
+ * Developed by Rupam jyoti Das 
+ */
 import Home from '../components/home'
 
 
