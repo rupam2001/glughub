@@ -4,7 +4,7 @@
  * Developed by Rupam jyoti Das 
  */
 
-const ENDPOINT = 'https://glughub-backend.herokuapp.com/'
+const ENDPOINT = 'https://glughub-backend.herokuapp.com'
 // const ENDPOINT = 'http://192.168.29.19:3300'
 
 const AuthRoute = '/auth/google' //post
