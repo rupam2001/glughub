@@ -64,7 +64,15 @@
       border: 2px solid rgba(128, 128, 128, 0.678);
   }
 
-
+.hub{
+  /* background-color: var(--btn);
+ 
+  color: var(--first);
+  border-radius: 0.5rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  margin-left: 0.1rem; */
+}
 
 
   .profile:active{

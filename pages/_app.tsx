@@ -3,10 +3,10 @@ import '../node_modules/font-awesome/css/font-awesome.css'
 import AuthContextProvider from '../context/authcontext'
 // import StoreContext from 
 
-import router from 'next/router'
-import { progressBarRef } from '../components/refs';
+
 import { useEffect } from 'react';
 import { applyCurrentTheme } from '../utils/helpers';
+import DeviceAlert from '../components/deviceAlert';
 
 
 // router.onRouteChangeStart = () => {
@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }) {
   return (
 
     <AuthContextProvider>
-
       <Component {...pageProps} />
+      <DeviceAlert/>
     </AuthContextProvider>
 
   )

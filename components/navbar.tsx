@@ -12,7 +12,7 @@ export default function NavBar() {
         <div className={style.navbar}>
             <LoadingBar color='#f11946' ref={progressBarRef} />
             <Link href="/">
-                <span className={style.title}>GlugHub</span>
+                <span className={style.title}>Glug<span className={style.hub}>Hub</span></span>
             </Link>
             <Searchbar />
             <Notification />
