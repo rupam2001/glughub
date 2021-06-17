@@ -11,13 +11,17 @@ import { coverPhotoPlacHolder, questionWindowSize, randomSuffixForQuestions } fr
 import { AuthContext } from '../context/authcontext'
 import { calcArticleReadTime } from '../utils/helpers'
 import { progressBarRef } from './refs'
+import { ARTICLES_STORE, setARTICLES_STORE } from '../context/statelessStore'
 
-// import { Button } from '../components/stateless/stateless'
+
+
+
 interface propTypes {
     customeFetch?(skip: number, limit: number): Promise<Array<any>>,
     heading?: string,
     hideAskbtn?: boolean
 }
+
 
 export default function Article(props: propTypes) {
     const router = useRouter()
@@ -37,6 +41,9 @@ export default function Article(props: propTypes) {
     }
 
     useEffect(() => {
+        if (ARTICLES_STORE.length != 0 && articles.length === 0) {
+            setArticles(ARTICLES_STORE)
+        }
 
     }, [])
 
@@ -49,6 +56,9 @@ export default function Article(props: propTypes) {
         fetchFunc(range.skip, range.limit)
             .then(qs => {
                 setArticles([...articles, ...qs])
+
+                setARTICLES_STORE([...articles, ...qs])
+
                 // console.log(articles)
                 setShowLoadMore(qs.length !== 0)
                 setLoading(false)
@@ -59,6 +69,8 @@ export default function Article(props: propTypes) {
             })
 
     }, [range])
+
+
 
     const handleArticleClicked = (slug: string) => {
         progressBarRef.current.continuousStart()

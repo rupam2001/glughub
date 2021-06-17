@@ -31,16 +31,21 @@ export default function MarkDown(props: propType) {
                 // makeDraggable(e.target.id)
                 return;
             }
+            window.open(_props.src, "_blank")
             setFullSize(fullSize.length ? '' : _props.src);
 
         };
 
         return (
-            <div className={fullSize === _props.src ? "md-large-box" : "md-img-box"} style={{
-                display: 'flex',
-                justifyContent: 'center',
-                // height: '20vh'
-            }}>
+            <div
+                // className={fullSize === _props.src ? "md-large-box" : "md-img-box"} 
+                className={"md-img-box"}
+
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    // height: '20vh'
+                }}>
                 <div>
 
                     {fullSize === _props.src && <p>{_props.alt}</p>}
@@ -48,7 +53,8 @@ export default function MarkDown(props: propType) {
                         _props.src.includes("youtube") ?
                             (<iframe width="560" height="315" src={_props.src} className="md-img-box" allowFullScreen></iframe>) :
                             (<img
-                                className={fullSize == _props.src ? "md-large md-img" : "md-small md-img"}
+                                // className={fullSize == _props.src ? "md-large md-img" : "md-small md-img"}
+                                className={"md-small md-img"}
                                 alt={_props.alt}
                                 src={_props.src}
                                 onClick={handleClick}

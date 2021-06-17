@@ -6,6 +6,7 @@ export default class CustomDocument extends Document {
             <Html>
                 <Head>
                     <title>GlugHub</title>
+                    <meta name="viewport" content="width=1024"></meta>
                 </Head>
                 <body>
                     <Main />

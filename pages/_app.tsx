@@ -9,6 +9,8 @@ import { applyCurrentTheme } from '../utils/helpers';
 import DeviceAlert from '../components/deviceAlert';
 
 
+
+
 // router.onRouteChangeStart = () => {
 //   progressBarRef.current.continuousStart()
 // };
@@ -27,7 +29,7 @@ function MyApp({ Component, pageProps }) {
 
     <AuthContextProvider>
       <Component {...pageProps} />
-      <DeviceAlert/>
+      <DeviceAlert />
     </AuthContextProvider>
 
   )

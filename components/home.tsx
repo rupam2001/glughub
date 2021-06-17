@@ -10,6 +10,7 @@ import moment from 'moment'
 import Loader from 'react-loader-spinner'
 import { questionWindowSize, randomSuffixForQuestions } from '../utils/constanse'
 import { progressBarRef } from './refs'
+import { QUESTIONS_STORE, setQUESTIONS_STORE } from '../context/statelessStore'
 
 // import { Button } from '../components/stateless/stateless'
 interface propTypes {
@@ -35,9 +36,17 @@ export default function Home(props: propTypes) {
 
     useEffect(() => {
 
+
     }, [])
 
     useEffect(() => {
+        if (questions.length == 0 && QUESTIONS_STORE.length != 0) {
+            setQuestions(QUESTIONS_STORE)
+            setLoading(false)
+
+
+            return
+        }
         setLoading(true)
         setShowLoadMore(false)
 
@@ -46,6 +55,7 @@ export default function Home(props: propTypes) {
         fetchFunc(range.skip, range.limit)
             .then(qs => {
                 setQuestions([...questions, ...qs])
+                setQUESTIONS_STORE([...questions, ...qs])
                 // console.log(questions)
                 setShowLoadMore(qs.length !== 0)
                 setLoading(false)
