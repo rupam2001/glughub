@@ -656,3 +656,18 @@ text{
     /* background-color: var(--first); */
     font-weight: bold;
 }
+
+
+.footer-main{
+  width: 100%;
+  height: 5rem;
+  background-color: var(--second);
+  padding-top: 1rem;
+}
+.jecglug{
+  text-align: center;
+  color: var(--third);
+}
+.jecglug a{
+  color: #088abd;
+}
