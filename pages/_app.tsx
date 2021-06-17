@@ -7,7 +7,7 @@ import AuthContextProvider from '../context/authcontext'
 import { useEffect } from 'react';
 import { applyCurrentTheme } from '../utils/helpers';
 import DeviceAlert from '../components/deviceAlert';
-
+import Head from 'next/head'
 
 
 
@@ -26,11 +26,15 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-
-    <AuthContextProvider>
-      <Component {...pageProps} />
-      <DeviceAlert />
-    </AuthContextProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=1024" />
+      </Head>
+      <AuthContextProvider>
+        <Component {...pageProps} />
+        <DeviceAlert />
+      </AuthContextProvider>
+    </>
 
   )
 }
